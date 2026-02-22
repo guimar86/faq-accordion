@@ -1,6 +1,60 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
 :root {
   --clr-white: hsl(0, 100%, 100%);
   --clr-purple-100: hsl(275, 100%, 97%);
   --clr-purple-600: hsl(292, 16%, 49%);
   --clr-purple-950: hsl(292, 42%, 14%);
+  --ff: "Work Sans", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--clr-purple-950);
+}
+
+body {
+  font-family: var(--ff);
+  color: var(--clr-purple-600);
+  background-color: var(--clr-purple-100);
+}
+.accordion {
+  max-width: 600px;
+  margin: 50px auto;
+  background-color: var(--clr-white);
+  border-radius: 10px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.accr-header {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  gap: 10px;
+}
+.accr-header .title {
+  color: var(--clr-purple-950);
+  font-weight: 700;
+}
+.accr-header .icon-plus,
+.accr-header .icon-star {
+  transition: transform 0.3s ease;
+  width: 30px;
+}
+
+.accr-header .icon-plus:hover {
+  fill: var(--clr-purple-600);
+  color: var(--clr-white);
+}
+
+.accr-body {
+  display: none;
+  padding: 10px 0;
+}
+.accr-item.active .accr-body {
+  display: block;
 }
