@@ -14,6 +14,7 @@
 
     <title>Frontend Mentor | FAQ accordion</title>
     <link rel="stylesheet" href="./css/styles.css" />
+    <script src="./js/index.js" defer></script>
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
     <style>
       .attribution {
@@ -29,7 +30,7 @@
     <div class="accordion">
       <div class="accr-header">
         <svg
-          class="icon-star"
+          class="icon icon-star"
           aria-hidden="true"
           fill="none"
           stroke-width="1.5"
@@ -49,7 +50,7 @@
         <div class="accr-header">
           <p class="title">What is Frontend Mentor, and how will it help me?</p>
           <svg
-            class="icon-plus"
+            class="icon icon-plus"
             aria-hidden="true"
             fill="none"
             stroke-width="1.5"
@@ -63,19 +64,37 @@
               stroke-linejoin="round"
             ></path>
           </svg>
+          <svg
+            class="icon icon-minus"
+            data-slot="icon"
+            aria-hidden="true"
+            fill="none"
+            stroke-width="1.5"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M15 12H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            ></path>
+          </svg>
         </div>
         <div class="accr-body">
-          Frontend Mentor offers realistic coding challenges to help developers
-          improve their frontend coding skills with projects in HTML, CSS, and
-          JavaScript. It's suitable for all levels and ideal for portfolio
-          building.
+          <p>
+            Frontend Mentor offers realistic coding challenges to help
+            developers improve their frontend coding skills with projects in
+            HTML, CSS, and JavaScript. It's suitable for all levels and ideal
+            for portfolio building.
+          </p>
         </div>
       </div>
       <div class="accr-item">
         <div class="accr-header">
           <p class="title">How do I get started with Frontend Mentor?</p>
           <svg
-            class="icon-plus"
+            class="icon icon-plus"
             aria-hidden="true"
             fill="none"
             stroke-width="1.5"
@@ -89,18 +108,36 @@
               stroke-linejoin="round"
             ></path>
           </svg>
+          <svg
+            class="icon icon-minus"
+            data-slot="icon"
+            aria-hidden="true"
+            fill="none"
+            stroke-width="1.5"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M15 12H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            ></path>
+          </svg>
         </div>
         <div class="accr-body">
-          To get started, simply sign up for a free account on the Frontend
-          Mentor website. Once you're registered, you can browse through the
-          available challenges and start coding!
+          <p>
+            To get started, simply sign up for a free account on the Frontend
+            Mentor website. Once you're registered, you can browse through the
+            available challenges and start coding!
+          </p>
         </div>
       </div>
       <div class="accr-item">
         <div class="accr-header">
           <p class="title">Is Frontend Mentor free?</p>
           <svg
-            class="icon-plus"
+            class="icon icon-plus"
             aria-hidden="true"
             fill="none"
             stroke-width="1.5"
@@ -114,11 +151,29 @@
               stroke-linejoin="round"
             ></path>
           </svg>
+          <svg
+            class="icon icon-minus"
+            data-slot="icon"
+            aria-hidden="true"
+            fill="none"
+            stroke-width="1.5"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M15 12H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            ></path>
+          </svg>
         </div>
         <div class="accr-body">
-          Yes, Frontend Mentor offers both free and premium coding challenges,
-          with the free option providing access to a range of projects suitable
-          for all skill levels.
+          <p>
+            Yes, Frontend Mentor offers both free and premium coding challenges,
+            with the free option providing access to a range of projects
+            suitable for all skill levels.
+          </p>
         </div>
       </div>
       <div class="accr-item">
@@ -127,7 +182,7 @@
             Can I use Frontend Mentor projects in my portfolio?
           </p>
           <svg
-            class="icon-plus"
+            class="icon icon-plus"
             aria-hidden="true"
             fill="none"
             stroke-width="1.5"
@@ -141,11 +196,29 @@
               stroke-linejoin="round"
             ></path>
           </svg>
+          <svg
+            class="icon icon-minus"
+            data-slot="icon"
+            aria-hidden="true"
+            fill="none"
+            stroke-width="1.5"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M15 12H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            ></path>
+          </svg>
         </div>
         <div class="accr-body">
-          Yes, you can use projects completed on Frontend Mentor in your
-          portfolio. It's an excellent way to showcase your skills to potential
-          employers!
+          <p>
+            Yes, you can use projects completed on Frontend Mentor in your
+            portfolio. It's an excellent way to showcase your skills to
+            potential employers!
+          </p>
         </div>
       </div>
       <div class="accr-item">
@@ -154,7 +227,7 @@
             How can I get help if I'm stuck on a Frontend Mentor challenge?
           </p>
           <svg
-            class="icon-plus"
+            class="icon icon-plus"
             aria-hidden="true"
             fill="none"
             stroke-width="1.5"
@@ -168,11 +241,29 @@
               stroke-linejoin="round"
             ></path>
           </svg>
+          <svg
+            class="icon icon-minus"
+            data-slot="icon"
+            aria-hidden="true"
+            fill="none"
+            stroke-width="1.5"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M15 12H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            ></path>
+          </svg>
         </div>
         <div class="accr-body">
-          The best place to get help is inside Frontend Mentor's Discord
-          community. There's a help channel where you can ask questions and seek
-          support from other community members.
+          <p>
+            The best place to get help is inside Frontend Mentor's Discord
+            community. There's a help channel where you can ask questions and
+            seek support from other community members.
+          </p>
         </div>
       </div>
     </div>

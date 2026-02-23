@@ -4,6 +4,7 @@
   --clr-purple-100: hsl(275, 100%, 97%);
   --clr-purple-600: hsl(292, 16%, 49%);
   --clr-purple-950: hsl(292, 42%, 14%);
+  --clr-purple-highlight: #b224f2;
   --ff: "Work Sans", sans-serif;
 }
 
@@ -17,9 +18,19 @@ h6 {
 }
 
 body {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  min-height: 100vh;
+  place-items: center;
   font-family: var(--ff);
   color: var(--clr-purple-600);
-  background-color: var(--clr-purple-100);
+  background: linear-gradient(
+    to bottom,
+    var(--clr-purple-950) 0%,
+    var(--clr-purple-950) 40%,
+    var(--clr-purple-100) 40%,
+    var(--clr-purple-100) 100%
+  );
 }
 .accordion {
   max-width: 600px;
@@ -28,33 +39,92 @@ body {
   border-radius: 10px;
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
   padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .accr-header {
   display: flex;
+  flex-grow: 1;
   align-items: center;
   cursor: pointer;
   gap: 10px;
 }
 .accr-header .title {
   color: var(--clr-purple-950);
-  font-weight: 700;
+  font-weight: 600;
+}
+.accr-header .title:hover {
+  color: var(--clr-purple-highlight);
+  font-weight: 600;
 }
 .accr-header .icon-plus,
-.accr-header .icon-star {
-  transition: transform 0.3s ease;
+.accr-header .icon-star,
+.accr-header .icon-minus {
+  transition: transform 0.3s ease-out;
   width: 30px;
 }
 
+.accr-header .icon-plus,
+.accr-header .icon-minus {
+  margin-left: auto;
+}
+
+.icon {
+  transition:
+    opacity 0.3s ease-out,
+    transform 0.3s ease-out;
+}
+
+.icon-minus {
+  display: none;
+}
+
+.icon-plus {
+  opacity: 1;
+}
+
+.icon-star {
+  fill: var(--clr-purple-highlight);
+  color: var(--clr-white);
+}
 .accr-header .icon-plus:hover {
-  fill: var(--clr-purple-600);
+  fill: var(--clr-purple-highlight);
   color: var(--clr-white);
 }
 
 .accr-body {
-  display: none;
-  padding: 10px 0;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+
+  transition:
+    max-height 0.4s ease-out,
+    opacity 0.3s ease-in-out,
+    padding 0.3s ease-in-out;
+
+  padding: 0 1rem;
 }
+
+.accr-body p {
+  margin: 0;
+  line-height: 1.5;
+}
+
 .accr-item.active .accr-body {
-  display: block;
+  max-height: 300px; /* must be bigger than content */
+  opacity: 1;
+  padding: 1rem;
+}
+
+.accr-item.active .icon-plus {
+  display: none;
+  transform: rotate(90deg);
+}
+
+.accr-item.active .icon-minus {
+  display: inline-block;
+  fill: var(--clr-purple-950);
+  color: var(--clr-white);
 }
