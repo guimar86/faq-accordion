@@ -33,7 +33,7 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 30%;
   background-color: var(--clr-purple-950);
   background-image: url("../assets/images/background-pattern-desktop.svg");
   background-repeat: no-repeat;
@@ -155,7 +155,7 @@ footer {
   height: 31px;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 400px) {
   .background {
     height: 25%;
     background-image: url("../assets/images/background-pattern-mobile.svg");
