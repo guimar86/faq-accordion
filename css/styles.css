@@ -143,6 +143,18 @@ body {
   color: var(--clr-white);
 }
 
+footer {
+  display: grid;
+  grid-area: 2/1;
+  text-align: center;
+}
+
+.w3c-img {
+  border: 0;
+  width: 88px;
+  height: 31px;
+}
+
 @media (max-width: 600px) {
   body {
     background:
