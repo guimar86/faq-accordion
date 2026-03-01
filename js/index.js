@@ -14,3 +14,14 @@ accordionItems.forEach((item, index) => {
     item.classList.add("active");
   });
 });
+
+document.querySelectorAll(".accr-header .title").forEach((button) => {
+  button.addEventListener("click", () => {
+    const isExpanded = button.getAttribute("aria-expanded") === "true";
+    button.setAttribute("aria-expanded", !isExpanded);
+    const content = document.getElementById(
+      button.getAttribute("aria-controls"),
+    );
+    content.classList.toggle("active", !isExpanded);
+  });
+});

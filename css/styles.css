@@ -20,6 +20,7 @@ h6 {
 body {
   margin: 0;
   min-height: 100vh;
+  padding: 0;
   background-color: var(--clr-purple-100);
   position: relative;
   display: grid;
@@ -44,7 +45,6 @@ body {
 
 .accordion {
   max-width: 600px;
-  margin: 50px auto;
   background-color: var(--clr-white);
   border-radius: 10px;
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
@@ -62,6 +62,7 @@ body {
   gap: 10px;
 }
 .accr-header .title {
+  all: unset;
   color: var(--clr-purple-950);
   font-weight: 600;
 }
@@ -155,7 +156,7 @@ footer {
   height: 31px;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 600px) {
   .background {
     height: 25%;
     background-image: url("../assets/images/background-pattern-mobile.svg");
